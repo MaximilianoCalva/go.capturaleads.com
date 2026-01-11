@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente: CapturaLeads - Go.CapturaLeads</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #0a0e27;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+            background: linear-gradient(135deg, #2966ff 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 15px;
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-badge {
+            background: rgba(37, 211, 102, 0.1);
+            color: #25D366;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .links-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .link-item:hover {
+            background: rgba(41, 102, 255, 0.1);
+            border-color: rgba(41, 102, 255, 0.3);
+            transform: translateX(5px);
+        }
+
+        .link-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .link-icon {
+            font-size: 20px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .link-name {
+            font-weight: 500;
+        }
+
+        .link-url {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: monospace;
+        }
+
+        .arrow {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">🎯</div>
+            <h1>Cliente: CapturaLeads</h1>
+            <p class="subtitle">Directorio de páginas y assets (Go.CapturaLeads)</p>
+        </div>
+
+        <!-- Servicio: Captación SaaS -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">
+                    <span>🚀 Servicio: Captación SaaS</span>
+                </div>
+                <span class="status-badge">Activo</span>
+            </div>
+
+            <div class="links-grid">
+                <!-- Landing Page -->
+                <a href="https://go.capturaleads.com/captura-leads/captacion-saas/" target="_blank" class="link-item">
+                    <div class="link-info">
+                        <span class="link-icon">📄</span>
+                        <div>
+                            <div class="link-name">Landing Page (Venta)</div>
+                            <div class="link-url">/captura-leads/captacion-saas/</div>
+                        </div>
+                    </div>
+                    <span class="arrow">↗</span>
+                </a>
+
+                <!-- Success Page -->
+                <a href="https://go.capturaleads.com/captura-leads/captacion-saas/siguiente/" target="_blank"
+                    class="link-item">
+                    <div class="link-info">
+                        <span class="link-icon">🎉</span>
+                        <div>
+                            <div class="link-name">Success Page (Confirmación)</div>
+                            <div class="link-url">/captura-leads/captacion-saas/siguiente/</div>
+                        </div>
+                    </div>
+                    <span class="arrow">↗</span>
+                </a>
+
+                <!-- Email Template -->
+                <a href="https://go.capturaleads.com/captura-leads/captacion-saas/email/" target="_blank"
+                    class="link-item">
+                    <div class="link-info">
+                        <span class="link-icon">📧</span>
+                        <div>
+                            <div class="link-name">Email Template (Onboarding)</div>
+                            <div class="link-url">/captura-leads/captacion-saas/email/</div>
+                        </div>
+                    </div>
+                    <span class="arrow">↗</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generado para Go.CapturaLeads v1.0.0
+        </div>
+    </div>
+
+</body>
+
+</html>
