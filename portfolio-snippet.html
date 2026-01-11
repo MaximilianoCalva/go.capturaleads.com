@@ -1,0 +1,211 @@
+<!-- PORTFOLIO SNIPPET - NUESTROS TRABAJOS -->
+<style>
+    .portfolio-snippet {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: #05081a;
+        color: white;
+        padding: 60px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .portfolio-header {
+        text-align: center;
+        margin-bottom: 60px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portfolio-badge {
+        display: inline-block;
+        background: rgba(41, 102, 255, 0.1);
+        color: #2966ff;
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        border: 1px solid rgba(41, 102, 255, 0.3);
+    }
+
+    .portfolio-title {
+        font-size: 42px;
+        font-weight: 800;
+        margin: 0 0 20px 0;
+        background: linear-gradient(135deg, #ffffff 0%, #a5a5a5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .portfolio-description {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.6;
+    }
+
+    /* Grid de Proyectos */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .project-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        border-color: rgba(41, 102, 255, 0.3);
+    }
+
+    .project-image-container {
+        height: 220px;
+        background: linear-gradient(135deg, #0f143a 0%, #1a1f3c 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Icono placeholder para el proyecto hasta que haya screenshot real */
+    .project-icon {
+        font-size: 64px;
+        filter: drop-shadow(0 0 20px rgba(41, 102, 255, 0.3));
+        transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .project-icon {
+        transform: scale(1.1);
+    }
+
+    .project-content {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-tags {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+    }
+
+    .project-tag {
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .project-name {
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        margin: 0 0 10px 0;
+    }
+
+    .project-excerpt {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.5;
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+
+    .project-link {
+        color: #2966ff;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: gap 0.2s ease;
+    }
+
+    .project-card:hover .project-link {
+        gap: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .portfolio-title {
+            font-size: 32px;
+        }
+    }
+</style>
+
+<div class="portfolio-snippet">
+    <div class="portfolio-header">
+        <span class="portfolio-badge">Showcase</span>
+        <h2 class="portfolio-title">Nuestros Trabajos</h2>
+        <p class="portfolio-description">
+            Explora cómo ayudamos a marcas líderes a transformar su presencia digital con ecosistemas de venta de alto
+            impacto.
+        </p>
+    </div>
+
+    <div class="projects-grid">
+
+        <!-- PROYECTO 1: CapturaLeads -->
+        <a href="https://go.capturaleads.com/captura-leads/captacion-saas/" target="_blank" class="project-card">
+            <div class="project-image-container">
+                <span class="project-icon">🎯</span>
+            </div>
+            <div class="project-content">
+                <div class="project-tags">
+                    <span class="project-tag">SaaS</span>
+                    <span class="project-tag">Captación</span>
+                    <span class="project-tag">Automation</span>
+                </div>
+                <h3 class="project-name">CapturaLeads</h3>
+                <p class="project-excerpt">
+                    Diseño de landing page de alta conversión integrada con sistema de Workspace centralizado para
+                    gestión de leads en tiempo real.
+                </p>
+                <div class="project-link">
+                    Ver Proyecto <span>→</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- PROYECTO 2: Placeholder (Próximamente) -->
+        <article class="project-card" style="opacity: 0.5; cursor: default;">
+            <div class="project-image-container">
+                <span class="project-icon">🔜</span>
+            </div>
+            <div class="project-content">
+                <div class="project-tags">
+                    <span class="project-tag">Próximamente</span>
+                </div>
+                <h3 class="project-name">Nuevo Proyecto</h3>
+                <p class="project-excerpt">
+                    Estamos trabajando en la próxima historia de éxito. Mantente al tanto de nuestras nuevas
+                    implementaciones.
+                </p>
+            </div>
+        </article>
+
+    </div>
+</div>
