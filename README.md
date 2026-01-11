@@ -28,6 +28,16 @@ El propósito de este subdominio (`go.capturaleads.com`) es separar la lógica d
 *   **Infraestructura:** Subdominio dedicado
 *   **Integración:** Conectado vía Webhooks/API con `workspace.capturaleads.com`
 
+## 📂 Estructura de Directorios
+
+- **`/portfolio-snippet.html`**: Presentación general de proyectos (Grid).
+- **`/CapturaLeads/`**: Carpeta del cliente "CapturaLeads".
+    - `capturaleads-captacionsas.html`: Portfolio de assets específicos del proyecto.
+    - `/Captacion-SaaS/`:
+        - `landing-page-snippet.html`: Landing Page principal.
+        - `success-page-snippet.html`: Página de confirmación.
+        - `email.html`: Plantilla de correo de bienvenida.
+
 ---
 
 **© 2026 CapturaLeads.** Todos los derechos reservados.
