@@ -1,0 +1,201 @@
+<!-- LANDING PAGE SNIPPET - CAPTURALEADS (VENTA DE SERVICIO) -->
+<style>
+    .landing-snippet * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .landing-snippet {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        color: white;
+        background: #0a0e27;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    /* Background Elements */
+    .landing-snippet::before {
+        content: '';
+        position: absolute;
+        top: -20%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(41, 102, 255, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        border-radius: 50%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .landing-snippet::after {
+        content: '';
+        position: absolute;
+        bottom: -20%;
+        left: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+        border-radius: 50%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .landing-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Left Content */
+    .landing-content h2 {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+    }
+
+    .gradient-text {
+        background: linear-gradient(135deg, #2966ff 0%, #00d4ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .landing-description {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .benefit-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .check-icon {
+        color: #2966ff;
+        background: rgba(41, 102, 255, 0.15);
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 14px;
+    }
+
+    /* Right Form Card */
+    .form-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .form-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .form-subtitle {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Elementor Form Override (Simulation for snippet) */
+    .elementor-shortcode {
+        margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+        .landing-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 40px;
+        }
+
+        .landing-content h2 {
+            font-size: 36px;
+        }
+
+        .benefit-item {
+            justify-content: center;
+        }
+
+        .form-card {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+</style>
+
+<div class="landing-snippet">
+    <div class="landing-container">
+        <!-- Text Content -->
+        <div class="landing-content">
+            <h2>Deja de perder clientes en <span class="gradient-text">Meta Ads</span></h2>
+            <p class="landing-description">
+                Captura, gestiona y automatiza tus leads en un solo lugar. Landing pages profesionales listas en
+                minutos, no en semanas.
+            </p>
+
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <span class="check-icon">✓</span>
+                    <span>Landing Pages de alta conversión</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check-icon">✓</span>
+                    <span>Dashboard de gestión (CRM) incluido</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check-icon">✓</span>
+                    <span>Notificaciones automáticas por Email</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check-icon">✓</span>
+                    <span>Sin programadores ni configuraciones técnicas</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-card">
+            <div class="form-header">
+                <h3 class="form-title">Empieza Gratis Hoy</h3>
+                <p class="form-subtitle">Completa el formulario para reservar tu acceso</p>
+            </div>
+
+            <div class="elementor-shortcode">
+                [elementor-template id="28"]
+            </div>
+
+            <div style="text-align: center; margin-top: 15px; font-size: 12px; color: rgba(255,255,255,0.4);">
+                🔒 Tus datos están 100% seguros
+            </div>
+        </div>
+    </div>
+</div>
