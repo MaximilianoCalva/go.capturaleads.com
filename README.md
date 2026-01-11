@@ -1,8 +1,13 @@
-# 🚀 Go.CapturaLeads - Motor de Landing Pages
+# 🚀 Go.CapturaLeads
 
-> **Repositorio:** `go.capturaleads.com`  
-> **Versión:** v1.0.0  
-> **Tecnología:** WordPress
+> **Repositorio:** `go.capturaleads.com`
+> **Versión:** v1.0.0
+> **Tecnología:** WordPress + Elementor
+
+## ⚙️ Configuración del Sitio (WordPress)
+
+*   **Título del Sitio:** `Go.CapturaLeads`
+*   **Descripción Corta:** `Infraestructura de Landing Pages`
 
 ## 📄 Descripción
 
