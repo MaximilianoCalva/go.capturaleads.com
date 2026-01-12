@@ -238,15 +238,28 @@
         background: linear-gradient(180deg, #0a0e27 0%, #1a1f3c 100%);
     }
 
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        align-items: center;
+    }
+
     .pricing-card {
-        max-width: 400px;
-        margin: 0 auto;
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(41, 102, 255, 0.3);
         border-radius: 24px;
-        padding: 40px;
+        padding: 30px;
         text-align: center;
         position: relative;
+    }
+
+    .pricing-card.featured {
+        background: linear-gradient(135deg, rgba(41, 102, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+        border: 2px solid #2966ff;
+        transform: scale(1.05);
+        z-index: 10;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     }
 
     .pricing-badge {
@@ -327,6 +340,13 @@
 
     /* Responsive */
     @media (max-width: 968px) {
+        .pricing-grid {
+            grid-template-columns: 1fr;
+            max-width: 400px;
+            margin: 0 auto;
+            gap: 40px;
+        }
+
         .hero-grid {
             grid-template-columns: 1fr;
             text-align: center;
@@ -372,7 +392,7 @@
                         tráfico en ventas reales sin complicaciones técnicas.</p>
 
                     <div class="hero-badges">
-                        <div class="hero-badge">⚡ Setup en 15 min</div>
+                        <div class="hero-badge">⚡ Inicia ahora a generar verdaderas conversiones</div>
                         <div class="hero-badge">🔒 CRM Incluido</div>
                         <div class="hero-badge">📱 Mobile First</div>
                     </div>
@@ -380,8 +400,7 @@
 
                 <div class="hero-form-card">
                     <div class="form-header">
-                        <h3 class="form-title">Reserva tu Acceso</h3>
-                        <p style="font-size: 14px; color: rgba(255,255,255,0.6)">Oferta exclusiva de lanzamiento</p>
+                        <h3 class="form-title">Empieza ahora</h3>
                     </div>
                     [elementor-template id="28"]
                     <div style="text-align: center; margin-top: 15px; font-size: 12px; color: rgba(255,255,255,0.4);">
@@ -430,7 +449,7 @@
             <div class="solution-grid">
                 <div class="solution-text">
                     <h2 class="section-title" style="text-align: left">Tu Ecosistema de Ventas</h2>
-                    <h3>No es solo una Landing Page.<br>Es una máquina de conversión.</h3>
+                    <h3>No es solo una simple web.<br>Es una máquina de conversión.</h3>
                     <p style="color: rgba(255,255,255,0.7); line-height: 1.6">
                         CapturaLeads integra todo lo que necesitas para profesionalizar tu proceso de ventas en una sola
                         herramienta simple y potente.
@@ -438,8 +457,8 @@
 
                     <div class="solution-features">
                         <div class="feature-box">
-                            <strong>1. Landing Page</strong>
-                            <span>Optimizada para conversión</span>
+                            <strong>1. Embudo de ventas</strong>
+                            <span>Optimizado para conversión</span>
                         </div>
                         <div class="feature-box">
                             <strong>2. Workspace</strong>
@@ -451,7 +470,7 @@
                         </div>
                         <div class="feature-box">
                             <strong>4. Base de Datos</strong>
-                            <span>Exportable para Remarketing</span>
+                            <span>Disponible para Remarketing</span>
                         </div>
                     </div>
                 </div>
@@ -470,23 +489,77 @@
             <h2 class="section-title">Inversión Inteligente</h2>
             <p class="section-subtitle">Recupera tu inversión con las primeras ventas organizadas.</p>
 
-            <div class="pricing-card">
-                <span class="pricing-badge">Más Popular</span>
-                <h3>Plan Básico</h3>
-                <div class="pricing-amount">$699<span>/mes</span></div>
-                <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px; font-size: 14px">Ideal para emprendedores
-                </p>
+            <div class="pricing-grid">
+                <!-- Plan Básico -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">Básico</h3>
+                    <div class="pricing-amount">$699<span>/mes</span></div>
+                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px; font-size: 14px">Ideal para
+                        emprendedores</p>
+                    <ul class="pricing-features">
+                        <li><span class="check-mark">✓</span> Embudo de ventas para tu servicio</li>
+                        <li><span class="check-mark">✓</span> Hasta 500 leads/mes</li>
+                        <li><span class="check-mark">✓</span> 1 usuario</li>
+                        <li><span class="check-mark">✓</span> Soporte por email</li>
+                        <!-- Features Incluidas -->
+                        <li><span class="check-mark">✓</span> Formulario optimizado</li>
+                        <li><span class="check-mark">✓</span> Workspace de gestión</li>
+                        <li><span class="check-mark">✓</span> Email automático de bienvenida</li>
+                        <li><span class="check-mark">✓</span> Estadísticas avanzadas</li>
+                        <li><span class="check-mark">✓</span> Emails personalizados</li>
+                    </ul>
+                    <a href="#form"
+                        onclick="document.querySelector('.hero-form-card').scrollIntoView({behavior: 'smooth'})"
+                        class="cta-btn"
+                        style="width: 100%; font-size: 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">Comenzar</a>
+                </div>
 
-                <ul class="pricing-features">
-                    <li><span class="check-mark">✓</span> 1 Landing Page Personalizada</li>
-                    <li><span class="check-mark">✓</span> Workspace de Gestión (CRM)</li>
-                    <li><span class="check-mark">✓</span> Emails Automáticos</li>
-                    <li><span class="check-mark">✓</span> Almacenamiento Ilimitado</li>
-                    <li><span class="check-mark">✓</span> Exportación a Excel/CSV</li>
-                </ul>
+                <!-- Plan Profesional -->
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">Más Popular</span>
+                    <h3 class="plan-name">Profesional</h3>
+                    <div class="pricing-amount">$2,999<span>/mes</span></div>
+                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px; font-size: 14px">El más equilibrado</p>
+                    <ul class="pricing-features">
+                        <li><span class="check-mark">✓</span> 5 Embudos de ventas</li>
+                        <li><span class="check-mark">✓</span> Hasta 2,000 leads/mes</li>
+                        <li><span class="check-mark">✓</span> Hasta 2 usuarios</li>
+                        <li><span class="check-mark">✓</span> Soporte prioritario</li>
+                        <!-- Features Incluidas -->
+                        <li><span class="check-mark">✓</span> Formulario optimizado</li>
+                        <li><span class="check-mark">✓</span> Workspace de gestión</li>
+                        <li><span class="check-mark">✓</span> Email automático de bienvenida</li>
+                        <li><span class="check-mark">✓</span> Estadísticas avanzadas</li>
+                        <li><span class="check-mark">✓</span> Emails personalizados</li>
+                    </ul>
+                    <a href="#form"
+                        onclick="document.querySelector('.hero-form-card').scrollIntoView({behavior: 'smooth'})"
+                        class="cta-btn" style="width: 100%; font-size: 16px">Comenzar</a>
+                </div>
 
-                <a href="#form" onclick="document.querySelector('.hero-form-card').scrollIntoView({behavior: 'smooth'})"
-                    class="cta-btn" style="width: 100%; font-size: 16px">Empezar Ahora</a>
+                <!-- Plan Empresarial -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">Empresarial</h3>
+                    <div class="pricing-amount">$4,999<span>/mes</span></div>
+                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px; font-size: 14px">Para marcas grandes
+                    </p>
+                    <ul class="pricing-features">
+                        <li><span class="check-mark">✓</span> 10 Embudos de ventas</li>
+                        <li><span class="check-mark">✓</span> Leads ilimitados</li>
+                        <li><span class="check-mark">✓</span> Hasta 3 usuarios</li>
+                        <li><span class="check-mark">✓</span> Soporte prioritario</li>
+                        <!-- Features Incluidas -->
+                        <li><span class="check-mark">✓</span> Formulario optimizado</li>
+                        <li><span class="check-mark">✓</span> Workspace de gestión</li>
+                        <li><span class="check-mark">✓</span> Email automático de bienvenida</li>
+                        <li><span class="check-mark">✓</span> Estadísticas avanzadas</li>
+                        <li><span class="check-mark">✓</span> Emails personalizados</li>
+                    </ul>
+                    <a href="#form"
+                        onclick="document.querySelector('.hero-form-card').scrollIntoView({behavior: 'smooth'})"
+                        class="cta-btn"
+                        style="width: 100%; font-size: 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">Contactar</a>
+                </div>
             </div>
         </div>
     </section>
@@ -497,7 +570,7 @@
             <h2 class="section-title">¿Listo para ordenar tu negocio?</h2>
             <p class="section-subtitle">Deja de perseguir leads y empieza a cerrar ventas.</p>
             <a href="#form" onclick="document.querySelector('.hero-form-card').scrollIntoView({behavior: 'smooth'})"
-                class="cta-btn">Reservar mi Acceso</a>
+                class="cta-btn">Iniciar ahora </a>
 
             <div style="margin-top: 40px; color: rgba(255,255,255,0.4); font-size: 14px">
                 ¿Dudas? Escríbenos a contacto@capturaleads.com
