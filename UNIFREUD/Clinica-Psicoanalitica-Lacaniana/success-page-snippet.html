@@ -1,0 +1,195 @@
+<!-- SUCCESS PAGE SNIPPET - CAPTURALEADS -->
+<style>
+    /* Reset & Globals */
+    .success-snippet * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .success-snippet {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        color: white;
+        background: #0a0e27;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        min-height: 80vh;
+        /* Ocupar buena parte de la pantalla */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        padding: 50px 20px;
+    }
+
+    /* Background Elements */
+    .success-snippet::before {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(37, 211, 102, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        /* Green taint for success */
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+
+    .success-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        padding: 60px 40px;
+        text-align: center;
+        max-width: 600px;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .success-icon {
+        font-size: 80px;
+        margin-bottom: 30px;
+        display: inline-block;
+        filter: drop-shadow(0 0 20px rgba(37, 211, 102, 0.4));
+        animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .success-title {
+        font-size: 42px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #fff 0%, #cfcfcf 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .success-message {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+
+    .next-steps {
+        text-align: left;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 25px;
+        border-radius: 16px;
+        margin-bottom: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .next-steps h4 {
+        color: white;
+        margin-bottom: 15px;
+        font-size: 16px;
+        opacity: 0.9;
+    }
+
+    .step-item {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+    }
+
+    .step-number {
+        background: rgba(41, 102, 255, 0.2);
+        color: #2966ff;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #2966ff 0%, #1a4fd8 100%);
+        color: white;
+        text-decoration: none;
+        padding: 16px 40px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 16px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 10px 20px rgba(41, 102, 255, 0.3);
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 30px rgba(41, 102, 255, 0.4);
+    }
+
+    @keyframes popIn {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .success-title {
+            font-size: 32px;
+        }
+
+        .success-card {
+            padding: 40px 20px;
+            margin: 20px;
+        }
+    }
+</style>
+
+<div class="success-snippet">
+    <div class="success-card">
+        <div class="success-icon">🎉</div>
+
+        <h1 class="success-title">¡Tu siguiente paso está listo!</h1>
+
+        <p class="success-message">
+            El siguiente paso es registrarte en <strong>workspace.capturaleads.com</strong>.
+            Dentro podrás seleccionar tu paquete y empezar a generar las peticiones para tu landing de conversiones.
+        </p>
+
+        <div class="next-steps">
+            <h4>¿Qué sigue ahora?</h4>
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div>Ve a <strong>workspace.capturaleads.com</strong></div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div>Selecciona el paquete ideal para ti</div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div>Genera tu primera petición de Landing Page</div>
+            </div>
+        </div>
+
+        <a href="https://workspace.capturaleads.com/" class="cta-button">
+            Completar mi Registro
+        </a>
+
+        <div style="margin-top: 20px; font-size: 12px; color: rgba(255,255,255,0.3)">
+            ID de Referencia: #CPL-NEW-LEAD
+        </div>
+    </div>
+</div>

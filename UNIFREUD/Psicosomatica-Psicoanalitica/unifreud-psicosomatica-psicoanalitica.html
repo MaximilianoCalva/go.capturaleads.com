@@ -1,0 +1,215 @@
+<!-- PROJECT ASSETS SNIPPET - CAPTURALEADS -->
+<style>
+    /* Scoped Styles for Snippet (Reusing Portfolio Design) */
+    .assets-snippet {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: #05081a;
+        color: white;
+        padding: 60px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .assets-header {
+        text-align: center;
+        margin-bottom: 60px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .assets-badge {
+        display: inline-block;
+        background: rgba(37, 211, 102, 0.1);
+        color: #25D366;
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        border: 1px solid rgba(37, 211, 102, 0.3);
+    }
+
+    .assets-title {
+        font-size: 42px;
+        font-weight: 800;
+        margin: 0 0 20px 0;
+        background: linear-gradient(135deg, #ffffff 0%, #a5a5a5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .assets-description {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.6;
+    }
+
+    /* Grid de Assets */
+    .assets-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .asset-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .asset-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        border-color: rgba(41, 102, 255, 0.3);
+    }
+
+    .asset-image-container {
+        height: 180px;
+        background: linear-gradient(135deg, #0f143a 0%, #1a1f3c 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .asset-icon {
+        font-size: 56px;
+        filter: drop-shadow(0 0 20px rgba(41, 102, 255, 0.3));
+        transition: transform 0.5s ease;
+    }
+
+    .asset-card:hover .asset-icon {
+        transform: scale(1.1);
+    }
+
+    .asset-content {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .asset-tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        align-self: flex-start;
+    }
+
+    .asset-name {
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        margin: 0 0 10px 0;
+    }
+
+    .asset-url {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.4);
+        font-family: monospace;
+        margin-bottom: 15px;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 5px 10px;
+        border-radius: 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .asset-link {
+        color: #2966ff;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: gap 0.2s ease;
+        margin-top: auto;
+    }
+
+    .asset-card:hover .asset-link {
+        gap: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .assets-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="assets-snippet">
+    <div class="assets-header">
+        <span class="assets-badge">Servicio Activo</span>
+        <h2 class="assets-title">Unifreud</h2>
+        <p class="assets-description">
+            Assets generados para la campaña de Psicosomática Psicoanalítica.
+        </p>
+    </div>
+
+    <div class="assets-grid">
+
+        <!-- ASSET 1: Landing Page -->
+        <a href="https://go.capturaleads.com/unifreud/Psicosomatica-Psicoanalitica/" target="_blank" class="asset-card">
+            <div class="asset-image-container">
+                <span class="asset-icon">📄</span>
+            </div>
+            <div class="asset-content">
+                <span class="asset-tag">Sales Page</span>
+                <h3 class="asset-name">Landing Page</h3>
+                <div class="asset-url">/unifreud/Psicosomatica-Psicoanalitica/</div>
+                <div class="asset-link">
+                    Ver Página <span>→</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- ASSET 2: Success Page -->
+        <a href="https://go.capturaleads.com/unifreud/Psicosomatica-Psicoanalitica/siguiente/" target="_blank"
+            class="asset-card">
+            <div class="asset-image-container">
+                <span class="asset-icon">🎉</span>
+            </div>
+            <div class="asset-content">
+                <span class="asset-tag">Confirmation</span>
+                <h3 class="asset-name">Success Page</h3>
+                <div class="asset-url">/unifreud/Psicosomatica-Psicoanalitica/siguiente/</div>
+                <div class="asset-link">
+                    Ver Página <span>→</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- ASSET 3: Email Template -->
+        <a href="https://go.capturaleads.com/unifreud/Psicosomatica-Psicoanalitica/email/" target="_blank" class="asset-card">
+            <div class="asset-image-container">
+                <span class="asset-icon">📧</span>
+            </div>
+            <div class="asset-content">
+                <span class="asset-tag">Emailing</span>
+                <h3 class="asset-name">Email Onboarding</h3>
+                <div class="asset-url">/unifreud/Psicosomatica-Psicoanalitica/email/</div>
+                <div class="asset-link">
+                    Ver Template <span>→</span>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</div>
