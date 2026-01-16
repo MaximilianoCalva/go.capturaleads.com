@@ -6,8 +6,8 @@
 
 ## ⚙️ Configuración del Sitio (WordPress)
 
-*   **Título del Sitio:** `Go.CapturaLeads`
-*   **Descripción Corta:** `Infraestructura de Landing Pages`
+*   **Título del Sitio:** `Embudos de Venta | Captura Leads`
+*   **Descripción Corta:** `Infraestructura dedicada exclusivamente al despliegue de Embudos de Venta de Alta Conversión. Aquí alojamos estrategias digitales diseñadas para vender, transformar tráfico en clientes y maximizar el ROI con tecnología de carga ultrarrápida.`
 
 ## 📄 Descripción
 
