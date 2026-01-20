@@ -1,136 +1,163 @@
-<!-- LANDING PAGE SNIPPET - CAPTURALEADS (FULL WIDTH) -->
+<!-- UNIFREUD PREMIUM LANDING SNIPPET - PRUEBAS PSICOMÉTRICAS -->
 <style>
-    /* Reset & Globals */
+    /* 
+    PREMIUM DESIGN SYSTEM - UNIFREUD
+    Colors:
+    - Primary Blue: #042e66 (Deep, trustworthy)
+    - Secondary: #ffffff (Clean, crisp)
+    - Accent Red: #9f0528 (Bold, action-oriented)
+    - Gold/Yellow: #fbbf24 (Emphasis, premium feel)
+    */
+    :root {
+        --uni-blue: #042e66;
+        --uni-blue-light: #1a4fd8;
+        --uni-red: #9f0528;
+        --uni-gold: #fbbf24;
+        --uni-white: #ffffff;
+        --uni-text-dark: #1f2937;
+        --uni-text-light: #f3f4f6;
+        --uni-glass: rgba(255, 255, 255, 0.95);
+        --uni-glass-dark: rgba(4, 46, 102, 0.85);
+        --uni-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+    }
+
     .landing-snippet * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Inter', -apple-system, sans-serif;
     }
 
     .landing-snippet {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        color: white;
-        background: #0a0e27;
-        /* Force Full Width Hack for Elementor Boxed Containers */
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-        position: relative;
-        left: 0;
-    }
-
-    /* Common Utilities */
-    .snippet-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        position: relative;
-        z-index: 2;
-    }
-
-    .gradient-text {
-        background: linear-gradient(135deg, #2966ff 0%, #00d4ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .section-title {
-        font-size: 36px;
-        font-weight: 800;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .section-subtitle {
-        font-size: 18px;
-        color: rgba(255, 255, 255, 0.6);
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto 60px;
-        line-height: 1.6;
+        width: 100%;
+        overflow-x: hidden;
+        background-color: var(--uni-white);
     }
 
     /* === HERO SECTION === */
     .snippet-hero {
-        padding: 100px 0 80px;
         position: relative;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        background: radial-gradient(circle at 70% 30%, #1e4b8a 0%, var(--uni-blue) 100%);
+        padding: 80px 20px;
+        color: var(--uni-white);
         overflow: hidden;
     }
 
-    /* Hero Backgrounds */
+    /* Abstract Background Shapes */
     .snippet-hero::before {
         content: '';
         position: absolute;
-        top: -100px;
-        right: -100px;
+        top: -20%;
+        right: -10%;
         width: 800px;
         height: 800px;
-        background: radial-gradient(circle, rgba(41, 102, 255, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        background: radial-gradient(circle, rgba(159, 5, 40, 0.15) 0%, transparent 70%);
         border-radius: 50%;
-        pointer-events: none;
+        z-index: 0;
+        animation: pulse 10s infinite alternate;
+    }
+
+    .snippet-hero::after {
+        content: '';
+        position: absolute;
+        bottom: -20%;
+        left: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    .snippet-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+        width: 100%;
     }
 
     .hero-grid {
         display: grid;
-        grid-template-columns: 1.2fr 1fr;
+        grid-template-columns: 1.2fr 0.8fr;
         gap: 60px;
         align-items: center;
     }
 
-    .hero-content h1 {
-        font-size: 56px;
-        font-weight: 900;
-        line-height: 1.1;
-        margin-bottom: 25px;
-        letter-spacing: -1px;
+    .hero-content {
+        animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
-    .hero-description {
-        font-size: 20px;
+    .hero-content h1 {
+        font-size: 3.5rem;
+        line-height: 1.1;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-content h1 span {
+        background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: block;
+        font-size: 0.6em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
         color: rgba(255, 255, 255, 0.8);
-        line-height: 1.6;
-        margin-bottom: 40px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 30px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-left: 4px solid var(--uni-red);
+        padding-left: 20px;
     }
 
     .hero-badges {
         display: flex;
-        gap: 20px;
+        gap: 15px;
         flex-wrap: wrap;
+        margin-top: 40px;
     }
 
     .hero-badge {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: 1px solid rgba(255, 255, 255, 0.2);
         display: flex;
         align-items: center;
         gap: 8px;
-        background: rgba(255, 255, 255, 0.05);
-        padding: 8px 16px;
-        border-radius: 50px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        font-size: 14px;
+        transition: transform 0.3s;
     }
 
-    /* Hero Form Card */
+    .hero-badge:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* === FORM CARD === */
     .hero-form-card {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 24px;
-        padding: 35px;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        background: var(--uni-glass);
+        padding: 40px 30px;
+        border-radius: 20px;
+        box-shadow: var(--uni-shadow);
+        border-top: 4px solid var(--uni-red);
+        animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s backwards;
         position: relative;
-    }
-
-    .hero-form-card::after {
-        content: '';
-        position: absolute;
-        inset: -1px;
-        border-radius: 24px;
-        padding: 1px;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        pointer-events: none;
     }
 
     .form-header {
@@ -139,439 +166,449 @@
     }
 
     .form-title {
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 8px;
+        color: var(--uni-blue);
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 5px;
     }
 
-    /* === PROBLEM SECTION === */
-    .snippet-problem {
-        padding: 100px 0;
-        background: rgba(255, 255, 255, 0.02);
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    .form-subtitle {
+        color: #6b7280;
+        font-size: 0.95rem;
     }
 
-    .problem-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-        margin-top: 50px;
+    /* Elementor Form Overrides */
+    .elementor-form .elementor-field-group {
+        margin-bottom: 15px !important;
     }
 
-    .problem-card {
-        background: rgba(255, 0, 0, 0.05);
-        border: 1px solid rgba(255, 59, 48, 0.2);
-        padding: 30px;
-        border-radius: 16px;
+    .elementor-form input,
+    .elementor-form select,
+    .elementor-form textarea {
+        background: #f9fafb !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 8px !important;
+        padding: 12px 15px !important;
+        font-size: 1rem !important;
+        color: var(--uni-text-dark) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .elementor-form input:focus {
+        border-color: var(--uni-blue) !important;
+        box-shadow: 0 0 0 3px rgba(4, 46, 102, 0.1) !important;
+    }
+
+    .elementor-form button {
+        background: linear-gradient(135deg, var(--uni-blue) 0%, #061e38 100%) !important;
+        border-radius: 8px !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        padding: 15px !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 15px rgba(4, 46, 102, 0.4) !important;
+    }
+
+    .elementor-form button:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(4, 46, 102, 0.5) !important;
+    }
+
+    /* === CONTENT SECTIONS === */
+    .section-title {
         text-align: center;
-        transition: transform 0.3s ease;
+        font-size: 2.5rem;
+        color: var(--uni-blue);
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
     }
 
-    .problem-card:hover {
-        transform: translateY(-5px);
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
     }
 
-    .problem-icon {
-        font-size: 32px;
+    .section-subtitle {
+        font-size: 1.1rem;
+        color: #4b5563;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    /* Profile Grid */
+    .snippet-section {
+        padding: 100px 20px;
+        background: #fff;
+    }
+
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .feature-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        border: 1px solid #f3f4f6;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--uni-blue);
+        transition: width 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card:hover::before {
+        width: 100%;
+        opacity: 0.05;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        display: inline-block;
+        background: #ecf2ff;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 12px;
+        color: var(--uni-blue);
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--uni-blue);
         margin-bottom: 15px;
     }
 
-    .problem-card h3 {
-        font-size: 18px;
-        margin-bottom: 10px;
-        color: #ff3b30;
+    .card-text {
+        font-size: 0.95rem;
+        color: #6b7280;
+        line-height: 1.6;
     }
 
-    .problem-card p {
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.6);
-        line-height: 1.5;
+    /* === CURRICULUM === */
+    .snippet-curriculum {
+        background: #f8fafc;
+        padding: 100px 20px;
     }
 
-    /* === SOLUTION SECTION === */
-    .snippet-solution {
-        padding: 100px 0;
-    }
-
-    .solution-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-        align-items: center;
-    }
-
-    .solution-text h3 {
-        font-size: 28px;
-        margin-bottom: 20px;
-        line-height: 1.3;
-    }
-
-    .solution-features {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        margin-top: 30px;
-    }
-
-    .feature-box {
-        background: rgba(41, 102, 255, 0.05);
-        border: 1px solid rgba(41, 102, 255, 0.1);
-        padding: 20px;
+    .module-card {
+        background: #fff;
+        padding: 25px;
         border-radius: 12px;
+        border-left: 5px solid var(--uni-red);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
     }
 
-    .feature-box strong {
-        display: block;
-        margin-bottom: 5px;
-        color: white;
+    .module-card h4 {
+        color: var(--uni-blue);
+        font-size: 1.1rem;
+        margin-bottom: 10px;
     }
 
-    .feature-box span {
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    /* === PRICING SECTION === */
+    /* === PRICING === */
     .snippet-pricing {
-        padding: 100px 0;
-        background: linear-gradient(180deg, #0a0e27 0%, #1a1f3c 100%);
-    }
-
-    .pricing-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        align-items: center;
+        padding: 100px 20px;
+        background: linear-gradient(to bottom, #fff, #f0f4ff);
     }
 
     .pricing-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(41, 102, 255, 0.3);
-        border-radius: 24px;
-        padding: 30px;
+        background: #fff;
+        border-radius: 20px;
+        padding: 50px;
         text-align: center;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
         position: relative;
+        border: 2px solid transparent;
+        max-width: 500px;
+        margin: 0 auto;
+        background-clip: padding-box;
     }
 
-    .pricing-card.featured {
-        background: linear-gradient(135deg, rgba(41, 102, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-        border: 2px solid #2966ff;
-        transform: scale(1.05);
-        z-index: 10;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    .pricing-card.premium {
+        border-color: var(--uni-gold);
     }
 
     .pricing-badge {
         position: absolute;
-        top: -12px;
+        top: -15px;
         left: 50%;
         transform: translateX(-50%);
-        background: #2966ff;
-        color: white;
-        padding: 6px 16px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .pricing-amount {
-        font-size: 48px;
+        background: var(--uni-gold);
+        color: var(--uni-blue);
         font-weight: 800;
-        margin: 20px 0 10px;
-        color: white;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 10px rgba(251, 191, 36, 0.4);
     }
 
-    .pricing-amount span {
-        font-size: 16px;
-        font-weight: 400;
-        color: rgba(255, 255, 255, 0.6);
+    .price-large {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--uni-blue);
+        margin: 20px 0 5px;
     }
 
-    .pricing-features {
-        margin: 30px 0;
+    .price-sub {
+        font-size: 1.1rem;
+        color: #6b7280;
+        margin-bottom: 30px;
+    }
+
+    .price-list {
         text-align: left;
-        list-style: none;
+        margin: 30px 0;
     }
 
-    .pricing-features li {
-        margin-bottom: 15px;
+    .price-item {
         display: flex;
-        align-items: center;
-        gap: 10px;
-        color: rgba(255, 255, 255, 0.8);
+        justify-content: space-between;
+        padding: 15px 0;
+        border-bottom: 1px solid #f3f4f6;
+        color: var(--uni-text-dark);
     }
 
-    .check-mark {
-        color: #2966ff;
+    .price-label {
+        font-weight: 500;
     }
 
-    /* === CTA SECTION === */
-    .snippet-cta {
-        padding: 80px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        text-align: center;
+    .price-value {
+        font-weight: 700;
+        color: var(--uni-blue);
     }
 
-    .cta-btn {
+    .cta-button {
         display: inline-block;
-        background: linear-gradient(135deg, #2966ff 0%, #1a4fd8 100%);
+        width: 100%;
+        padding: 18px;
+        background: var(--uni-blue);
         color: white;
         text-decoration: none;
-        padding: 16px 40px;
-        border-radius: 50px;
         font-weight: 700;
-        font-size: 18px;
-        transition: transform 0.2s;
-        box-shadow: 0 10px 20px rgba(41, 102, 255, 0.3);
+        border-radius: 10px;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+        box-shadow: 0 10px 20px rgba(4, 46, 102, 0.2);
     }
 
-    .cta-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 15px 30px rgba(41, 102, 255, 0.4);
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(4, 46, 102, 0.3);
+        background: #06397d;
     }
 
-    /* Elementor Fix */
-    .elementor-shortcode {
-        margin-top: 20px;
-    }
-
-    /* Responsive */
-    @media (max-width: 968px) {
-        .pricing-grid {
-            grid-template-columns: 1fr;
-            max-width: 400px;
-            margin: 0 auto;
-            gap: 40px;
-        }
-
+    /* === RESPONSIVE === */
+    @media (max-width: 900px) {
         .hero-grid {
             grid-template-columns: 1fr;
             text-align: center;
         }
 
-        .hero-content h1 {
-            font-size: 42px;
+        .hero-subtitle {
+            border-left: none;
+            padding-left: 0;
+            align-items: center;
         }
 
         .hero-badges {
             justify-content: center;
         }
 
-        .problem-grid {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .solution-grid {
-            grid-template-columns: 1fr;
+        .hero-content h1 {
+            font-size: 2.5rem;
         }
     }
 
-    @media (max-width: 576px) {
-        .problem-grid {
-            grid-template-columns: 1fr;
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
         }
 
-        .hero-content h1 {
-            font-size: 32px;
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 0.3;
+        }
+
+        100% {
+            transform: scale(1.1);
+            opacity: 0.5;
         }
     }
 </style>
 
 <div class="landing-snippet">
 
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
     <section class="snippet-hero">
         <div class="snippet-container">
             <div class="hero-grid">
+                <!-- Content Left -->
                 <div class="hero-content">
-                    <h1>Aplicación de Pruebas Psicométricas Proyectivas</h1>
-                    <p class="hero-description">Descripción del servicio... (Reemplazar con texto del PDF)</p>
+                    <h1>
+                        <span>FORMACIÓN ESPECIALIZADA</span>
+                        Aplicación de Pruebas Psicométricas Proyectivas
+                    </h1>
+
+                    <div class="hero-subtitle">
+                        <p><strong>Universidad Sigmund Freud de México (UNIFREUD)</strong></p>
+                        <p>📅 Inicio: <strong>17 de marzo de 2026</strong></p>
+                        <p>💻 Modalidad: <strong>100% En línea</strong></p>
+                        <p>⏳ Duración: <strong>6 meses (120 horas)</strong></p>
+                    </div>
 
                     <div class="hero-badges">
-                        <div class="hero-badge">⚡ Inicia ahora a generar verdaderas conversiones</div>
-                        <div class="hero-badge">🔒 CRM Incluido</div>
-                        <div class="hero-badge">📱 Mobile First</div>
+                        <div class="hero-badge">🎓 Doble Diploma</div>
+                        <div class="hero-badge">⚡ Validez RVOE</div>
+                        <div class="hero-badge">🔒 Formación Clínica</div>
                     </div>
                 </div>
 
+                <!-- Form Right -->
                 <div class="hero-form-card">
                     <div class="form-header">
-                        <h3 class="form-title">Empieza ahora</h3>
+                        <h3 class="form-title">Solicita Información</h3>
+                        <p class="form-subtitle">Recibe el temario completo y becas disponibles</p>
                     </div>
-                    [elementor-template id="28"]
-                    <div style="text-align: center; margin-top: 15px; font-size: 12px; color: rgba(255,255,255,0.4);">
-                        🔒 Tus datos están 100% seguros
+                    <!-- ELEMENTOR FORM SHORTCODE -->
+                    [elementor-template id="181"]
+                    <div
+                        style="text-align: center; margin-top: 15px; font-size: 12px; color: #6b7280; display: flex; align-items: center; justify-content: center; gap: 5px;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        Tus datos están protegidos por UNIFREUD
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
-    <section class="snippet-problem">
+    <!-- OBJETIVOS & PERFIL -->
+    <section class="snippet-section">
         <div class="snippet-container">
-            <h2 class="section-title">¿Por qué elegir este diplomado?</h2>
-            <p class="section-subtitle">Identifica los desafíos y domina la técnica.</p>
+            <div class="section-header">
+                <h2 class="section-title">Objetivos y Perfil</h2>
+                <p class="section-subtitle">Diseñado para profesionistas que buscan excelencia en el diagnóstico clínico
+                    y laboral.</p>
+            </div>
 
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">📱</div>
-                    <h3>WhatsApp Caótico</h3>
-                    <p>Leads perdidos entre cientos de chats personales sin responder.</p>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">Objetivo General</h3>
+                    <p class="card-text">Capacitar al alumno en la aplicación, calificación e interpretación de baterías
+                        de pruebas psicométricas y proyectivas para un diagnóstico certero.</p>
                 </div>
-                <div class="problem-card">
-                    <div class="problem-icon">📧</div>
-                    <h3>Correos Perdidos</h3>
-                    <p>Solicitudes de información que se van a spam o se olvidan.</p>
+                <div class="feature-card">
+                    <div class="card-icon">👥</div>
+                    <h3 class="card-title">Perfil de Ingreso</h3>
+                    <p class="card-text">Profesionistas, pasantes o estudiantes de ciencias de la salud, sociales,
+                        humanidades y magisterio interesados en la evaluación psicológica.</p>
                 </div>
-                <div class="problem-card">
-                    <div class="problem-icon">📉</div>
-                    <h3>ROI Invisible</h3>
-                    <p>No sabes qué anuncio trajo la venta. Gastas a ciegas.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">🐢</div>
-                    <h3>Lentitud</h3>
-                    <p>Tardas horas en responder, cuando el cliente ya compró a otro.</p>
+                <div class="feature-card">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">Perfil de Egreso</h3>
+                    <p class="card-text">El egresado dominará la integración de reportes psicológicos completos para
+                        ámbitos clínicos, educativos y laborales.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="snippet-solution">
+    <!-- CURRICULUM -->
+    <section class="snippet-curriculum">
         <div class="snippet-container">
-            <div class="solution-grid">
-                <div class="solution-text">
-                    <h2 class="section-title" style="text-align: left">Tu Ecosistema de Ventas</h2>
-                    <h3>No es solo una simple web.<br>Es una máquina de conversión.</h3>
-                    <p style="color: rgba(255,255,255,0.7); line-height: 1.6">
-                        CapturaLeads integra todo lo que necesitas para profesionalizar tu proceso de ventas en una sola
-                        herramienta simple y potente.
-                    </p>
+            <div class="section-header">
+                <h2 class="section-title">Plan de Estudios</h2>
+                <p class="section-subtitle">4 Módulos intensivos de especialización práctica.</p>
+            </div>
 
-                    <div class="solution-features">
-                        <div class="feature-box">
-                            <strong>1. Embudo de ventas</strong>
-                            <span>Optimizado para conversión</span>
-                        </div>
-                        <div class="feature-box">
-                            <strong>2. Workspace</strong>
-                            <span>CRM simple para gestionar leads</span>
-                        </div>
-                        <div class="feature-box">
-                            <strong>3. Automatización</strong>
-                            <span>Emails automáticos al instante</span>
-                        </div>
-                        <div class="feature-box">
-                            <strong>4. Base de Datos</strong>
-                            <span>Disponible para Remarketing</span>
-                        </div>
-                    </div>
+            <div class="grid-3">
+                <div class="module-card">
+                    <h4>Módulo 1</h4>
+                    <p>Pruebas Psicométricas en adolescentes y adultos.</p>
                 </div>
-                <!-- Visual placeholder for dashboard image -->
-                <div
-                    style="background: rgba(41, 102, 255, 0.05); border: 1px solid rgba(41, 102, 255, 0.2); border-radius: 20px; height: 350px; display: flex; align-items: center; justify-content: center;">
-                    <span style="font-size: 60px">📊</span>
+                <div class="module-card">
+                    <h4>Módulo 2</h4>
+                    <p>Pruebas Proyectivas (Gráficas y temáticas).</p>
+                </div>
+                <div class="module-card">
+                    <h4>Módulo 3</h4>
+                    <p>Integración en el ámbito laboral.</p>
+                </div>
+                <div class="module-card">
+                    <h4>Módulo 4</h4>
+                    <p>Integración de Diagnóstico Clínico.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- PRICING -->
     <section class="snippet-pricing">
         <div class="snippet-container">
-            <h2 class="section-title">Inversión Inteligente</h2>
-            <p class="section-subtitle">Recupera tu inversión con las primeras ventas organizadas.</p>
+            <div class="pricing-card premium">
+                <div class="pricing-badge">OPCIÓN RECOMENDADA</div>
+                <h3 style="color: var(--uni-blue); font-size: 1.5rem; font-weight: 700;">Inversión Educativa</h3>
+                <div class="price-large">$1,980 <span
+                        style="font-size: 1rem; color: #9ca3af; font-weight: 500;">/mes</span></div>
+                <p class="price-sub">MXN (Pesos Mexicanos)</p>
 
-            <div class="pricing-grid">
-                <!-- Plan Básico -->
-                <div class="pricing-card">
-                    <h3 class="plan-name">Opción 1</h3>
-                    <div class="pricing-amount">$699<span>/mes</span></div>
-                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px; font-size: 14px">Ideal para
-                        emprendedores</p>
-                    <ul class="pricing-features">
-                        <li><span class="check-mark">✓</span> Embudo de ventas para tu servicio</li>
-                        <li><span class="check-mark">✓</span> Hasta 500 leads/mes</li>
-                        <li><span class="check-mark">✓</span> 1 usuario</li>
-                        <li><span class="check-mark">✓</span> Soporte por email</li>
-                        <!-- Features Incluidas -->
-                        <li><span class="check-mark">✓</span> Formulario optimizado</li>
-                        <li><span class="check-mark">✓</span> Workspace de gestión</li>
-                        <li><span class="check-mark">✓</span> Email automático de bienvenida</li>
-                        <li><span class="check-mark">✓</span> Estadísticas avanzadas</li>
-                        <li><span class="check-mark">✓</span> Emails personalizados</li>
-                    </ul>
-                    <a href="#form"
-                        onclick="document.querySelector('.hero-form-card').scrollIntoView({behavior: 'smooth'})"
-                        class="cta-btn"
-                        style="width: 100%; font-size: 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">Comenzar</a>
+                <div class="price-list">
+                    <div class="price-item">
+                        <span class="price-label">Inscripción Única</span>
+                        <span class="price-value">$3,700 MXN</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-label">Mensualidad (x6)</span>
+                        <span class="price-value">$1,980 MXN</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-label">Pago Final (Diploma)</span>
+                        <span class="price-value">$4,930 MXN</span>
+                    </div>
                 </div>
 
-                <!-- Plan Profesional -->
-                <div class="pricing-card featured">
-                    <span class="pricing-badge">Más Popular</span>
-                    <h3 class="plan-name">Opción 2</h3>
-                    <div class="pricing-amount">$2,999<span>/mes</span></div>
-                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px; font-size: 14px">El más equilibrado</p>
-                    <ul class="pricing-features">
-                        <li><span class="check-mark">✓</span> 5 Embudos de ventas</li>
-                        <li><span class="check-mark">✓</span> Hasta 2,000 leads/mes</li>
-                        <li><span class="check-mark">✓</span> Hasta 2 usuarios</li>
-                        <li><span class="check-mark">✓</span> Soporte prioritario</li>
-                        <!-- Features Incluidas -->
-                        <li><span class="check-mark">✓</span> Formulario optimizado</li>
-                        <li><span class="check-mark">✓</span> Workspace de gestión</li>
-                        <li><span class="check-mark">✓</span> Email automático de bienvenida</li>
-                        <li><span class="check-mark">✓</span> Estadísticas avanzadas</li>
-                        <li><span class="check-mark">✓</span> Emails personalizados</li>
-                    </ul>
-                    <a href="#form"
-                        onclick="document.querySelector('.hero-form-card').scrollIntoView({behavior: 'smooth'})"
-                        class="cta-btn" style="width: 100%; font-size: 16px">Comenzar</a>
-                </div>
-
-                <!-- Plan Empresarial -->
-                <div class="pricing-card">
-                    <h3 class="plan-name">Opción 3</h3>
-                    <div class="pricing-amount">$4,999<span>/mes</span></div>
-                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px; font-size: 14px">Para marcas grandes
-                    </p>
-                    <ul class="pricing-features">
-                        <li><span class="check-mark">✓</span> 10 Embudos de ventas</li>
-                        <li><span class="check-mark">✓</span> Leads ilimitados</li>
-                        <li><span class="check-mark">✓</span> Hasta 3 usuarios</li>
-                        <li><span class="check-mark">✓</span> Soporte prioritario</li>
-                        <!-- Features Incluidas -->
-                        <li><span class="check-mark">✓</span> Formulario optimizado</li>
-                        <li><span class="check-mark">✓</span> Workspace de gestión</li>
-                        <li><span class="check-mark">✓</span> Email automático de bienvenida</li>
-                        <li><span class="check-mark">✓</span> Estadísticas avanzadas</li>
-                        <li><span class="check-mark">✓</span> Emails personalizados</li>
-                    </ul>
-                    <a href="#form"
-                        onclick="document.querySelector('.hero-form-card').scrollIntoView({behavior: 'smooth'})"
-                        class="cta-btn"
-                        style="width: 100%; font-size: 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">Contactar</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer CTA -->
-    <section class="snippet-cta">
-        <div class="snippet-container">
-            <h2 class="section-title">¿Listo para ordenar tu negocio?</h2>
-            <p class="section-subtitle">Deja de perseguir leads y empieza a cerrar ventas.</p>
-            <a href="#form" onclick="document.querySelector('.hero-form-card').scrollIntoView({behavior: 'smooth'})"
-                class="cta-btn">Iniciar ahora </a>
-
-            <div style="margin-top: 40px; color: rgba(255,255,255,0.4); font-size: 14px">
-                ¿Dudas? Escríbenos a contacto@capturaleads.com
+                <a href="#form" class="cta-button"
+                    onclick="document.querySelector('.snippet-hero').scrollIntoView({behavior: 'smooth'});">
+                    Reservar mi Lugar Ahora
+                </a>
+                <p style="margin-top: 15px; font-size: 0.85rem; color: #6b7280;">
+                    Pagos mensuales del 1 al 7 de cada mes.
+                </p>
             </div>
         </div>
     </section>

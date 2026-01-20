@@ -144,6 +144,98 @@
         }
     }
 
+    /* Tracking Line Styles */
+    .tracking-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Line background */
+    .tracking-container::after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 0;
+    }
+
+    /* Active progress line */
+    .tracking-progress {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 50%;
+        height: 2px;
+        background: #25D366;
+        z-index: 1;
+        transition: width 1s ease;
+    }
+
+    .tracker-step {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        width: 80px;
+    }
+
+    .tracker-circle {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #0a0e27;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        margin: 0 auto 8px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    .tracker-label {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+    }
+
+    /* Active State */
+    .tracker-step.active .tracker-circle {
+        border-color: #2966ff;
+        color: #2966ff;
+        box-shadow: 0 0 15px rgba(41, 102, 255, 0.3);
+        background: rgba(41, 102, 255, 0.1);
+    }
+
+    .tracker-step.active .tracker-label {
+        color: #2966ff;
+    }
+
+    /* Completed State */
+    .tracker-step.completed .tracker-circle {
+        background: #25D366;
+        border-color: #25D366;
+        color: #0a0e27;
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .tracker-step.completed .tracker-label {
+        color: #25D366;
+    }
+
+
     /* Responsive */
     @media (max-width: 768px) {
         .success-title {
@@ -161,35 +253,59 @@
     <div class="success-card">
         <div class="success-icon">🎉</div>
 
-        <h1 class="success-title">¡Tu siguiente paso está listo!</h1>
+        <h1 class="success-title">¡Pre-registro Exitoso!</h1>
 
-        <p class="success-message">
-            El siguiente paso es registrarte en <strong>workspace.capturaleads.com</strong>.
-            Dentro podrás seleccionar tu paquete y empezar a generar las peticiones para tu landing de conversiones.
-        </p>
+        <!-- Tracking Line -->
+        <div class="tracking-container">
+            <div class="tracking-progress"></div>
 
-        <div class="next-steps">
-            <h4>¿Qué sigue ahora?</h4>
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <div>Ve a <strong>workspace.capturaleads.com</strong></div>
+            <!-- Step 1: Registro (Done) -->
+            <div class="tracker-step completed">
+                <div class="tracker-circle">✓</div>
+                <div class="tracker-label">Registro</div>
             </div>
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <div>Selecciona el paquete ideal para ti</div>
+
+            <!-- Step 2: Documentos (Active) -->
+            <div class="tracker-step active">
+                <div class="tracker-circle">2</div>
+                <div class="tracker-label">Documentos</div>
             </div>
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <div>Genera tu primera petición de Landing Page</div>
+
+            <!-- Step 3: Pago (Pending) -->
+            <div class="tracker-step">
+                <div class="tracker-circle">3</div>
+                <div class="tracker-label">Pago</div>
             </div>
         </div>
 
-        <a href="https://workspace.capturaleads.com/" class="cta-button">
-            Completar mi Registro
+        <p class="success-message">
+            Hemos recibido tus datos correctamente. El siguiente paso es enviar tus documentos para validar tu
+            inscripción.
+        </p>
+
+        <div class="next-steps">
+            <h4>Siguientes Pasos (Enviar a alumnos@unifreud.com)</h4>
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div>Envía tu <strong>Identificación Oficial</strong></div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div>Adjunta tu <strong>Comprobante de Estudios</strong></div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div>Realiza el <strong>Pago de Inscripción</strong></div>
+            </div>
+        </div>
+
+        <a href="mailto:alumnos@unifreud.com?subject=Documentos%20Inscripcion%20-%20Clanica%20Lacaniana&body=Adjunto%20mis%20documentos%20para%20la%20inscripcion."
+            class="cta-button">
+            Enviar Documentos Ahora
         </a>
 
         <div style="margin-top: 20px; font-size: 12px; color: rgba(255,255,255,0.3)">
-            ID de Referencia: #CPL-NEW-LEAD
+            ID de Referencia: #UNIFREUD-NEW-STUDENT
         </div>
     </div>
 </div>
